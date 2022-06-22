@@ -41,7 +41,7 @@ const associated = new Map<string, string>([
     ['helpDiamond', diamondText],
     ['helpRune', runeText],
     ['helpMythos', mythosText],
-    ['helpChallenge', challengeText]   
+    ['helpChallenge', challengeText]  
 ]);
 export const displayHelp = (btn: HTMLElement) => {
     for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) {
