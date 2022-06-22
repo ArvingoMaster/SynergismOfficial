@@ -21,6 +21,14 @@ Rune recycle chance is a chance to recycle an offering so it isn't used! This fe
 it gives a multi to rune exp. Good enough for me anyways!
 
 `
+const mythosText = `
+Welcome to another reset tier, transcension! You reset all of your previous coin and diamond stuff and turn them into mythos
+which can be used for mythos buildings, more generator upgrades, more automation, and mythos upgrades! By transcending for the 
+first time you also unlock a new tab, CHALLENGES! They are explained in their own section. Mythos buildings are used to get mythos shards
+which are required for the next reset tier as you can see (Reincarnation) but they also give multiplier boosts to help you get back up
+to speed! However, don't spend all of your mythos! Some mythos upgrades boost based on unspent mythos. Have fun!
+
+`
 const challengeText = `Welcome to the challenges section!
 Challenges makes the game harder depending on which one are you one (currently you have 5, you will get more).
 Some block a feature (like no accelerators), and some reduce a feature (like reduced diamonds).
@@ -32,6 +40,7 @@ const associated = new Map<string, string>([
     ['helpCoin', coinText],
     ['helpDiamond', diamondText],
     ['helpRune', runeText],
+    ['helpMythos', mythosText],
     ['helpChallenge', challengeText]   
 ]);
 export const displayHelp = (btn: HTMLElement) => {
