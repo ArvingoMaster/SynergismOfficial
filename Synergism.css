@@ -2410,7 +2410,7 @@ p[id$="BlessingsTotal"] {
     border: 2px solid white;
     padding: 50px;
     padding-bottom: 10px;
-    white-space: pre-wrap
+    white-space: pre-wrap;
 }
 
 #helpbuttons > button:hover {
