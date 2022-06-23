@@ -3,6 +3,7 @@ import { player } from './Synergism';
 export const displayHelp = (btn: HTMLElement) => {
     const coinText = `
     Welcome to <span style='color:yellow'>Sy</span><span style='color:skyblue'>ne</span><span style='color:purple'>rg</span><span style='color:limegreen'>is</span><span style='color:orange'>m!</span> Here is where you start of course. The start is very simple, use coins to buy buildings and upgrades that produce even more coins! Keep doing it until you can do the next feature, you will know when you can see it. :)
+    However, also take the time to look at the name itself, synergism, it ain't there just for the looks! Starting with the first coin upgrade, note that it says "producers" and not just workers! This means that you can buy other producers to directly improve your coin gain! This is really the core of the entire game, so remember this!
     <i>Psst, check Patch Notes for promotional codes!</i>
     <img src="Pictures/icon.gif" style='padding-top:30px'>
     `
@@ -13,6 +14,7 @@ export const displayHelp = (btn: HTMLElement) => {
     <span style='color:skyblue'>Runes</span> will be talked about in a different section.
     The Diamond upgrades themselves are pretty decent, but a good amount of boost comes from the <span style='color:skyblue'>Diamond buildings!</span> Once bought,the first tier will make crystals which will boost coin production and every tier after will produce the tier before.
     The final item unlocked is a new "prestige" layer, <span style='color:skyblue'>accelerator boosts!</span> They will reset Diamond upgrades and your Diamonds (<b>NOT GENERATOR UPGRADES, AUTOMATION, or DIAMOND BUILDINGS</b>) in exchange for a boost to your accelerators. This can be useful to boost your progress if stuck.
+    Since they don't reset diamond buildings and some upgrades, before doing the reset you should spend most of your diamonds on them, this<b> spend before you reset </b>pops up a lot in the game, so make sure to do it on things that don't reset!
     <img src="Pictures/Diamond.png">
     `
     const spiritText =
@@ -71,9 +73,8 @@ export const displayHelp = (btn: HTMLElement) => {
     Remember, exiting and entering <span style='color:lime'>reincarnation challenges</span> does a <b>force-reincarnation</b> which grants you <b>1</b> obtanium. Maybe with the tools we have we can <span style='color:yellow'>enter</span> those challenges and <span style='color:yellow'>exit them very fast</span> to gain <span style='color:steelblue'> meaningful obtanium</span>? (<b>Timers set to 0 seconds will do them every frame!</b>)
     The main<span style='color:lime'> boost</span> in c15 is believe it or not<span style='color:skyblue'> crystals</span>, which means that <span style='color:skyblue'><b>PRISM</b></span>, the arguably worst rune, is one of the<span style='color:lime'> best</span> runes in c15, and that<span style='color:steelblue'> researches</span> that boost rune effectiveness or crystals are the only ones that are really gonna be able to do anything.
 
-    There are some periods in c15 where you can gain<span style='color:yellow'> insane coin exponent</span> gains in a short amount of time. For the sake of brevity we will call them "<i>booms</i>". One boom will occur once you reach<span style='color:lime'> e40k particles</span> (far away but you will get there) where you immediatly jump to<span style='color:lime'><b> e200k particles</b></span>!!! Why? Platonic and others sure don't know.
-    Another period of boom is when you can actually<span style='color:crimson'> ant sacrifice</span> in c15 to gain tons of <span style='color:steelblue'>obtanium</span> to buy researches and buy <span style='color:yellow'><b>TALISMAN FRAGS</b></span> to boost<span style='color:skyblue'> prism</span> even more!
-    The last period of boom is when you <span style='color:lime'>complete c9</span> in c15, because then<span style='color:crimson'> saccing</span> will give you a lot more frags than buying them.
+    There are some periods in c15 where you can gain<span style='color:yellow'> insane coin exponent</span> gains in a short amount of time. For the sake of brevity we will call them "<i>booms</i>". One boom will occur once you reach<span style='color:lime'> e30k particles</span> (far away but you will get there) where you immediatly jump to<span style='color:lime'><b> e200k particles</b></span>!!! Why? Platonic and others sure don't know.
+    The other two relates to <b>talismans</b> and the other relates to a completion of a <b>challenge</b>, I think you can figure out the specifics on your own. :)
     You shouldn't grind ages for these booms, but it is nice to know if you are close to one to try to go for it.
     That's basically all you need to know about c15, in between your <span style='color:gold'>cube</span> grinds and other grinds it's a good idea to do c15 every once in a while to<span style='color:lime'> boost your gains</span>!
     `
@@ -115,7 +116,7 @@ export const displayHelp = (btn: HTMLElement) => {
     Anyway, welcome to Reincarnation! Your previous progress can't reincarnate with you, but in exchange for them you gain particles, obtainium, and offerings!
     Obtainium is used for RESEARCH, talked about in their own section.
     Offerings are used for runes which you already know.
-    Particles, like mythos and diamonds before it, are used for automation, particle buidlings, and particle upgrades! Note how you need to unlock particle upgrades first via automation
+    Particles, like mythos and diamonds before it, are used for automation, particle buidlings, and particle upgrades! Note how you need to unlock particle upgrades first via research. Research makes the world go round!
     `
     const associated = new Map<string, string>([
         ['helpCoin', coinText],
