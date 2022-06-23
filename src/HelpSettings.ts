@@ -131,4 +131,5 @@ export const displayHelp = (btn: HTMLElement) => {
         e.style.backgroundColor = (e.id !== btn.id ? '' : 'crimson');
     }
     DOMCacheGetOrSet('helpText').innerHTML = String(associated.get(btn.id))
+
 }

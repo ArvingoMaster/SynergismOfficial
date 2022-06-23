@@ -2390,7 +2390,7 @@ p[id$="BlessingsTotal"] {
     display: grid;
     padding-top: 30px;
     padding-left: 30px;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(10, 15%);
     height: 300px;
     width: 500px;
