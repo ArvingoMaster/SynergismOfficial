@@ -864,7 +864,11 @@
 
         <div id="statistics" alt="statistics" label="statistics">
             <div id="achievements" alt="achievements" label="achievements">
-                <p id="achievementprogress" alt="achievementprogress" label="achievementprogress" style="color:white"></p>
+                <div class="NotificationToggle">
+                    <p id="achievementprogress" alt="achievementprogress" label="achievementprogress" style="color:white"></p>
+                    <img class="achNotification" id="notificationpic" alt="notificationpic" label="notificationpic" src = "Pictures/Achievement Notifications.png" title='Notifications' loading="lazy">
+                    <button class="auto nonSquare" id="toggle34" alt="toggle34" label="toggle34" toggleid="34" alt="34" label="34" format="[$]" style="border: 2px solid green">[ON]</button>
+                </div>
                 <table id="achievementstable" alt="achievementstable" label="achievementstable" style="padding: 0; font-size:0;">
                     <tr>
                         <td><img src="Pictures/Transparent Pics/ach1.png" id="ach1" alt="ach1" label="ach1" loading="lazy"></td>
@@ -2767,6 +2771,7 @@
         <button id="switchSettingSubTab4" alt="switchSettingSubTab4" label="switchSettingSubTab4" class="prestigeunlockib" style="border: 2px solid brown">Reset History</button>
         <button id="switchSettingSubTab5" alt="switchSettingSubTab5" label="switchSettingSubTab5" class="ascendunlockib" style="border: 2px solid darkorange">Ascend History</button>
         <button id="switchSettingSubTab6" alt="switchSettingSubTab6" label="switchSettingSubTab6" style="border: 2px solid white">Hotkeys</button>
+        <button id="switchSettingSubTab7" alt="switchSettingSubTab7" label="switchSettingSubTab7" style="border: 2px solid green">Help Zone</button>
     </div>
     <div class="subtabContent subtabDisplayFlex subtabActive" id="settingsubtab" alt="settingsubtab" label="settingsubtab">
         <div class="settingSubTabUpper">
@@ -3158,8 +3163,17 @@ $GQ$ for golden quarks, $GQS$ for format golden quarks"></p>
         <span id="hotkeyTooltip" alt="hotkeyTooltip" label="hotkeyTooltip">Why don't you try clicking on one of the item's <span style="color:gold;">gold</span> text above to get started? You can always cancel!</span>
         <span style="color: lightblue;">Loadouts correspond from SHIFT + 0 to SHIFT + 8 and SHIFT + BACKQUOTE. But you can't change it!</span>
     </div>
+    <div class="subtabContent subtabDisplayFlex" id="help" alt="help" label="help">
+        <div class="subtabContent subtabDisplayerFlex" id="helpbuttons" alt="helpbuttons" label="helpbuttons">
+            <button class="helpsections" id="helpCoin" alt="helpCoin" label="helpCoin" style="border: 2px solid yellow"> The Start (Coins)</button>
+            <button class="helpsections prestigeunlock" id="helpDiamond" alt="helpDiamond" label="helpDiamond" style="border: 2px solid skyblue"> Prestige (Diamond)</button>
+            <button class="helpsections prestigeunlock" id="helpRune" alt="helpRunes" label="helpRunes" style="border: 2px solid skyblue">Runes</button>
+            <button class="helpsections transcendunlock" id="helpMythos" alt="helpMythos" label="helpMythos" style="border: 2px solid purple"> Transcend (Mythos)</button>
+            <button class="helpsections transcendunlock" id="helpChallenge" alt="helpChallenge" label="helpChallenge" style="border: 2px solid purple"> Challenges </button>
+        </div>
+        <p class="helpText" id="helpText" alt="helpText" label="helpText"> Welcome to the <span style="color:green;">HELP ZONE! </span> Click a button to the left of this text to get started!<br> Once you hit certain milestones, more buttons will be added.</p>
+    </div>
 </div>
-
     <div id="shop" alt="shop" label="shop">
         <div id="shopWrapper" alt="shopWrapper" label="shopWrapper">
             <div id="actualWrapper" alt="actualWrapper" label="actualWrapper">
