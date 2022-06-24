@@ -534,6 +534,8 @@ export interface Player {
     singularityUpgrades: Record<keyof typeof singularityData, SingularityUpgrade>
     dailyCodeUsed: boolean
     hepteractAutoCraftPercentage: number
+    //help variables
+    diamondGreen: boolean
 
 }
 

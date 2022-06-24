@@ -1,5 +1,6 @@
 import { DOMCacheGetOrSet } from './Cache/DOM';
 import { player } from './Synergism';
+import { getElementById } from './Utility';
 export const displayHelp = (btn: HTMLElement) => {
     const coinText = `
     Welcome to <span style='color:yellow'>Sy</span><span style='color:skyblue'>ne</span><span style='color:purple'>rg</span><span style='color:limegreen'>is</span><span style='color:orange'>m!</span> Here is where you start of course. The start is very simple, use coins to buy buildings and upgrades that produce even more coins! Keep doing it until you can do the next feature, you will know when you can see it. :)
@@ -117,6 +118,8 @@ export const displayHelp = (btn: HTMLElement) => {
     Obtainium is used for RESEARCH, talked about in their own section.
     Offerings are used for runes which you already know.
     Particles, like mythos and diamonds before it, are used for automation, particle buidlings, and particle upgrades! Note how you need to unlock particle upgrades first via research. Research makes the world go round!
+    Unlike the previous tiers, reincarnating does not do that much on its own, but you want to keep your reincarnation building count as high as you can. So just remember to do it whenever you can make significant gains. You'll also find that the pace between reincarnations can vary a lot - you may want some really long ones and others as quick as possible. This may or may not be useful later...
+    Reincarnating for the first time also unlocks the SHOP where you can finally spend your well earned quarks, check the respective section for more info!
     `
     const associated = new Map<string, string>([
         ['helpCoin', coinText],
@@ -127,9 +130,20 @@ export const displayHelp = (btn: HTMLElement) => {
         ['helpParticle', particleText]
     ]);
 
-
+    //Checks to make backgrounds green:
+    if (player.unlocks.prestige && player.diamondGreen == false) {
+        getElementById("helpDiamond").style.backgroundColor = 'lightgreen'
+        player.diamondGreen = true
+    }
     for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) {
-        e.style.backgroundColor = (e.id !== btn.id ? '' : 'crimson');
+        if (e.id !== btn.id) {
+            if (e.style.backgroundColor == 'crimson') {
+                e.style.backgroundColor = 'black'
+            }
+        }
+        else {
+            e.style.backgroundColor = 'crimson'
+        }
     }
     DOMCacheGetOrSet('helpText').innerHTML = String(associated.get(btn.id))
 

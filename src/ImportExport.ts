@@ -184,11 +184,11 @@ export const resetGame = async () => {
     const hold = Object.assign({}, blankSave, {
         codes: Array.from(blankSave.codes)
     }) as Player;
+    //Reset Displays
+    toggleTabs('buildings');
+    toggleSubTab(1, 0);
     //Import Game
     await importSynergism(btoa(JSON.stringify(hold))!, true);
-    //Reset Displays
-    toggleTabs('settings');
-    toggleSubTab(-1, 6);
 }
 
 export const importSynergism = async (input: string, reset = false) => {
