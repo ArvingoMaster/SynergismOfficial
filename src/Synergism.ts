@@ -2,7 +2,7 @@ import type { DecimalSource } from 'break_infinity.js';
 import Decimal from 'break_infinity.js';
 import LZString from 'lz-string';
 
-import { isDecimal, sortWithIndices, sumContents, btoa } from './Utility';
+import { isDecimal, sortWithIndices, sumContents, btoa} from './Utility';
 import { blankGlobals, Globals as G } from './Variables';
 import { CalcECC, getChallengeConditions, challengeDisplay, highestChallengeRewards, challengeRequirement, runChallengeSweep, getMaxChallenges, challenge15ScoreMultiplier } from './Challenges';
 
@@ -45,7 +45,7 @@ import { DOMCacheGetOrSet } from './Cache/DOM';
 import localforage from 'localforage';
 import { singularityData, SingularityUpgrade } from './singularity';
 import type { PlayerSave } from './types/LegacySynergism';
-
+import { backgroundGreenAlert} from './HelpSettings'
 /**
  * Whether or not the current version is a testing version or a main version.
  * This should be detected when importing a file.
@@ -714,8 +714,18 @@ export const player: Player = {
     },
     dailyCodeUsed: false,
     hepteractAutoCraftPercentage: 50,
-    //HELP VARIABLES
-    diamondGreen: false
+    //HELP VARIABLES OT= One time
+    diamondOTCheck: false,
+    mythosOTCheck: false,
+    particleOTCheck: false,
+    antsOTCheck: false,
+    talismanOTCheck: false,
+    ascendOTCheck: false,
+    C11OTCheck: false,
+    C12OTCheck: false,
+    C13OTCheck: false,
+    C14OTCheck: false,
+    forgeOTCheck: false
 }
 
 export const blankSave = Object.assign({}, player, {
@@ -3435,7 +3445,8 @@ function tack(dt: number) {
             }
         }
     }
-
+    //Show if new help
+    backgroundGreenAlert()
     // Adds an offering every 2 seconds
     if (player.highestchallengecompletions[3] > 0) {
         automaticTools('addOfferings', dt/2)

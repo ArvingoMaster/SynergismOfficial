@@ -535,7 +535,18 @@ export interface Player {
     dailyCodeUsed: boolean
     hepteractAutoCraftPercentage: number
     //help variables
-    diamondGreen: boolean
+    diamondOTCheck: boolean
+    mythosOTCheck: boolean
+    particleOTCheck: boolean
+    antsOTCheck: boolean
+    talismanOTCheck: boolean
+    ascendOTCheck: boolean
+    C11OTCheck: boolean
+    C12OTCheck: boolean
+    C13OTCheck: boolean
+    C14OTCheck: boolean
+    forgeOTCheck: boolean
+
 
 }
 
