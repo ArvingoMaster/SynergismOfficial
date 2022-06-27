@@ -534,6 +534,19 @@ export interface Player {
     singularityUpgrades: Record<keyof typeof singularityData, SingularityUpgrade>
     dailyCodeUsed: boolean
     hepteractAutoCraftPercentage: number
+    //help variables
+    diamondOTCheck: boolean
+    mythosOTCheck: boolean
+    particleOTCheck: boolean
+    antsOTCheck: boolean
+    talismanOTCheck: boolean
+    ascendOTCheck: boolean
+    C11OTCheck: boolean
+    C12OTCheck: boolean
+    C13OTCheck: boolean
+    C14OTCheck: boolean
+    forgeOTCheck: boolean
+
 
 }
 

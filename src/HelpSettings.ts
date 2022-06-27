@@ -1,6 +1,37 @@
 import { DOMCacheGetOrSet } from './Cache/DOM';
 import { player } from './Synergism';
+import { getElementById } from './Utility';
+export const backgroundGreenAlert = () => {
+    const btn = getElementById('helpCoin')
+    if (player.unlocks.prestige && player.diamondOTCheck == false) {
+        getElementById("helpDiamond").style.backgroundColor = 'lightgreen'
+        player.diamondOTCheck = true
+    }
+    if (player.unlocks.transcend && player.mythosOTCheck == false) {
+        getElementById("helpMythos").style.backgroundColor = 'lightgreen'
+        getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
+        player.mythosOTCheck = true
+    }
+    if (player.unlocks.reincarnate && player.particleOTCheck == false) {
+        getElementById("helpParticle").style.backgroundColor = 'lightgreen'
+        getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
+        getElementById("helpObtainium").style.backgroundColor = 'lightgreen'
+        getElementById("helpShop").style.backgroundColor = 'lightgreen'
+        player.particleOTCheck = true
+    }
+    if (player.achievements[127] && player.antsOTCheck == false) {
+        getElementById("helpAnt").style.backgroundColor = 'lightgreen'
+        player.antsOTCheck = true
+    }
+
+    let newText = false
+    for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) { 
+        newText = newText || e.style.backgroundColor == 'lightgreen'
+    }
+    getElementById("switchSettingSubTab7").style.backgroundColor = newText ? 'lightgreen' : ''
+}
 export const displayHelp = (btn: HTMLElement) => {
+
     const coinText = `
     Welcome to <span style='color:yellow'>Sy</span><span style='color:skyblue'>ne</span><span style='color:purple'>rg</span><span style='color:limegreen'>is</span><span style='color:orange'>m!</span> Here is where you start of course. The start is very simple, use coins to buy buildings and upgrades that produce even more coins! Keep doing it until you can do the next feature, you will know when you can see it. :)
     <i>Psst, check Patch Notes for promotional codes!</i>
@@ -126,10 +157,10 @@ export const displayHelp = (btn: HTMLElement) => {
         ['helpParticle', particleText]
     ]);
 
-
     for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) {
         e.style.backgroundColor = (e.id !== btn.id ? '' : 'crimson');
     }
     DOMCacheGetOrSet('helpText').innerHTML = String(associated.get(btn.id))
+    
 
 }
