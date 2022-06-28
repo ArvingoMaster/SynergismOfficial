@@ -5,6 +5,7 @@ export const backgroundGreenAlert = () => {
     const btn = getElementById('helpCoin')
     if (player.unlocks.prestige && player.diamondOTCheck == false) {
         getElementById("helpDiamond").style.backgroundColor = 'lightgreen'
+        getElementById("helpRune").style.backgroundColor = 'lightgreen'
         player.diamondOTCheck = true
     }
     if (player.unlocks.transcend && player.mythosOTCheck == false) {
