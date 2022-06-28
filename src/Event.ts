@@ -38,7 +38,7 @@ const events: Record<string, HolidayData> = {
         notice: 0,
         event: false,
         buffs: {
-            quark: -0.2,
+            quark: 0,
             goldenQuark: 0,
             cubes: 0,
             powderConversion: 0,

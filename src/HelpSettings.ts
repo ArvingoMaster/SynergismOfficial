@@ -3,28 +3,61 @@ import { player } from './Synergism';
 import { getElementById } from './Utility';
 export const backgroundGreenAlert = () => {
     const btn = getElementById('helpCoin')
-    if (player.unlocks.prestige && player.diamondOTCheck == false) {
-        getElementById("helpDiamond").style.backgroundColor = 'lightgreen'
-        getElementById("helpRune").style.backgroundColor = 'lightgreen'
-        player.diamondOTCheck = true
+    if (player.singularityCount < 1) {
+        if (player.unlocks.prestige && player.diamondOTCheck == false) {
+            getElementById("helpDiamond").style.backgroundColor = 'lightgreen'
+            player.diamondOTCheck = true
+        }
+        if (player.unlocks.transcend && player.mythosOTCheck == false) {
+            getElementById("helpMythos").style.backgroundColor = 'lightgreen'
+            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
+            player.mythosOTCheck = true
+        }
+        if (player.unlocks.reincarnate && player.particleOTCheck == false) {
+            getElementById("helpParticle").style.backgroundColor = 'lightgreen'
+            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
+            getElementById("helpObtainium").style.backgroundColor = 'lightgreen'
+            getElementById("helpShop").style.backgroundColor = 'lightgreen'
+            player.particleOTCheck = true
+        }
+        if (player.achievements[127] && player.antsOTCheck == false) {
+            getElementById("helpAnt").style.backgroundColor = 'lightgreen'
+            player.antsOTCheck = true
+        }
+        if (player.ascensionCount > 0 && player.ascendOTCheck == false) {
+            getElementById("helpAsc").style.backgroundColor = 'lightgreen'
+            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
+            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
+            player.ascendOTCheck = true
+        }
+        if (player.challengecompletions[11] > 0 && player.C11OTCheck == false) {
+            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
+            getElementById("helpCor").style.backgroundColor = 'lightgreen'
+            player.C11OTCheck = true
+        }
+        if (player.challengecompletions[12] > 0 && player.C12OTCheck == false) {
+            getElementById("helpRune").style.backgroundColor = 'lightgreen'
+            getElementById("helpCor").style.backgroundColor = 'lightgreen'
+            player.C12OTCheck = true
+        }
+        if (player.challengecompletions[13] > 0 && player.C13OTCheck == false) {
+            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
+            getElementById("helpCor").style.backgroundColor = 'lightgreen'
+            player.C13OTCheck = true
+        }
+        if (player.challengecompletions[14] > 0 && player.C14OTCheck == false) {
+            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
+            getElementById("helpPostc14").style.backgroundColor = 'lightgreen'
+            getElementById("helpCor").style.backgroundColor = 'lightgreen'
+            getElementById("helpPlatUpg").style.backgroundColor = 'lightgreen'
+            player.C14OTCheck = true
+        }
+        if (player.challenge15Exponent > 1e15 && player.forgeOTCheck == false) {
+            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
+            getElementById("helpHept").style.backgroundColor = 'lightgreen'
+            player.forgeOTCheck = true
+        }
     }
-    if (player.unlocks.transcend && player.mythosOTCheck == false) {
-        getElementById("helpMythos").style.backgroundColor = 'lightgreen'
-        getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
-        player.mythosOTCheck = true
-    }
-    if (player.unlocks.reincarnate && player.particleOTCheck == false) {
-        getElementById("helpParticle").style.backgroundColor = 'lightgreen'
-        getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
-        getElementById("helpObtainium").style.backgroundColor = 'lightgreen'
-        getElementById("helpShop").style.backgroundColor = 'lightgreen'
-        player.particleOTCheck = true
-    }
-    if (player.achievements[127] && player.antsOTCheck == false) {
-        getElementById("helpAnt").style.backgroundColor = 'lightgreen'
-        player.antsOTCheck = true
-    }
-
     let newText = false
     for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) { 
         newText = newText || e.style.backgroundColor == 'lightgreen'
