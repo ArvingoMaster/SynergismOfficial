@@ -1,16 +1,19 @@
 import { DOMCacheGetOrSet } from './Cache/DOM';
 import { player } from './Synergism';
+import { Notification } from './UpdateHTML';
 import { getElementById } from './Utility';
-export const backgroundGreenAlert = () => {
+export const backgroundGreenAlert = async () => {
     const btn = getElementById('helpCoin')
-    if (player.singularityCount < 1) {
         if (player.unlocks.prestige && player.diamondOTCheck == false) {
             getElementById("helpDiamond").style.backgroundColor = 'lightgreen'
+            getElementById("helpRune").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs in Help Zone! (Prestige and Runes) ")
             player.diamondOTCheck = true
         }
         if (player.unlocks.transcend && player.mythosOTCheck == false) {
             getElementById("helpMythos").style.backgroundColor = 'lightgreen'
             getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs in Help Zone! (Transcension and Challenges!) ")
             player.mythosOTCheck = true
         }
         if (player.unlocks.reincarnate && player.particleOTCheck == false) {
@@ -18,46 +21,59 @@ export const backgroundGreenAlert = () => {
             getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
             getElementById("helpObtainium").style.backgroundColor = 'lightgreen'
             getElementById("helpShop").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs and info in Help Zone! (Reincarnation, Research, Shop, Challenges) ")
             player.particleOTCheck = true
         }
         if (player.achievements[127] && player.antsOTCheck == false) {
             getElementById("helpAnt").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs in Help Zone! (Ants) ")
             player.antsOTCheck = true
+        }
+        if (player.challengecompletions[9] > 0 && player.talismanOTCheck == false) {
+            getElementById("helpRune").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs in Help Zone! (Ants) ")
+            player.talismanOTCheck = true
         }
         if (player.ascensionCount > 0 && player.ascendOTCheck == false) {
             getElementById("helpAsc").style.backgroundColor = 'lightgreen'
             getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
             getElementById("helpCubes").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs and info in Help Zone! (Ascension, Cube Types, Challenges) ")
             player.ascendOTCheck = true
         }
         if (player.challengecompletions[11] > 0 && player.C11OTCheck == false) {
             getElementById("helpCubes").style.backgroundColor = 'lightgreen'
             getElementById("helpCor").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs and info in Help Zone! (Corruptions, Cube Types) ")
             player.C11OTCheck = true
         }
         if (player.challengecompletions[12] > 0 && player.C12OTCheck == false) {
             getElementById("helpRune").style.backgroundColor = 'lightgreen'
             getElementById("helpCor").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs and info in Help Zone! (Corruptions, Runes) ")
             player.C12OTCheck = true
         }
         if (player.challengecompletions[13] > 0 && player.C13OTCheck == false) {
             getElementById("helpCubes").style.backgroundColor = 'lightgreen'
             getElementById("helpCor").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs and info in Help Zone! (Corruptions, Cube Types) ")
             player.C13OTCheck = true
         }
         if (player.challengecompletions[14] > 0 && player.C14OTCheck == false) {
+            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
             getElementById("helpCubes").style.backgroundColor = 'lightgreen'
             getElementById("helpPostc14").style.backgroundColor = 'lightgreen'
             getElementById("helpCor").style.backgroundColor = 'lightgreen'
             getElementById("helpPlatUpg").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs and info in Help Zone! (Too long to list here)")
             player.C14OTCheck = true
         }
         if (player.challenge15Exponent > 1e15 && player.forgeOTCheck == false) {
             getElementById("helpCubes").style.backgroundColor = 'lightgreen'
             getElementById("helpHept").style.backgroundColor = 'lightgreen'
+            await Notification("New subtabs and info in Help Zone! (Hepteract Forge, Cube Types)")
             player.forgeOTCheck = true
         }
-    }
     let newText = false
     for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) { 
         newText = newText || e.style.backgroundColor == 'lightgreen'

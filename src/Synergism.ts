@@ -2,7 +2,7 @@ import type { DecimalSource } from 'break_infinity.js';
 import Decimal from 'break_infinity.js';
 import LZString from 'lz-string';
 
-import { isDecimal, sortWithIndices, sumContents, btoa} from './Utility';
+import { isDecimal, sortWithIndices, sumContents, btoa, getElementById} from './Utility';
 import { blankGlobals, Globals as G } from './Variables';
 import { CalcECC, getChallengeConditions, challengeDisplay, highestChallengeRewards, challengeRequirement, runChallengeSweep, getMaxChallenges, challenge15ScoreMultiplier } from './Challenges';
 
@@ -3755,7 +3755,7 @@ export const reloadShit = async (reset = false) => {
     toggleSubTab(4, 0); // Set 'runes' subtab back to 'runes' tab
     toggleSubTab(8, 0); // Set 'cube tribues' subtab back to 'cubes' tab
     toggleSubTab(9, 0); // set 'corruption main'
-    toggleSubTab(-1, 0); // set 'statistics helpzone, we want to load in to this'
+    toggleSubTab(-1, 0); // set 'settings main''
 
     interval(() => dailyResetCheck(), 30000);
 
@@ -3774,7 +3774,10 @@ export const reloadShit = async (reset = false) => {
         void Alert('Please show your appreciation by giving the GitHub repo a star. ❤️ https://github.com/pseudo-corp/SynergismOfficial');
         localStorage.setItem('pleaseStar', '');
     }
-
+    // Set help zone backgrounds to black
+    for (const e of Array.from(getElementById('helpCoin').parentElement!.children) as HTMLElement[]) {
+        e.style.backgroundColor = 'black'
+    }
     // All versions of Chrome and Firefox supported by the game have this API,
     // but not all versions of Edge and Safari do.
     if (
