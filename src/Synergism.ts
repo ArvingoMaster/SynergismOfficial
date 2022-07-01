@@ -3477,7 +3477,7 @@ function tack(dt: number) {
         }
     }
     //Show if new help
-    backgroundGreenAlert()
+    void backgroundGreenAlert()
     // Adds an offering every 2 seconds
     if (player.highestchallengecompletions[3] > 0) {
         automaticTools('addOfferings', dt/2)

@@ -206,19 +206,15 @@ export const importSynergism = async (input: string, reset = false) => {
         (f.exporttest === 'NO!' && testing)
     ) {
         const saveString = btoa(JSON.stringify(f));
-        console.log('passed test check')
 
         if (saveString === null) {
-            console.log('null')
             return Alert('Unable to import this file!');
-            
         }
 
         const item = new Blob([saveString], { type: 'text/plain' });
         await localforage.setItem<Blob>('Synergysave2', item);
 
         localStorage.setItem('saveScumIsCheating', Date.now().toString());
-        console.log('success')
         return reloadShit(reset);
     } else {
         return Alert('You are attempting to load a testing file in a non-testing version!');

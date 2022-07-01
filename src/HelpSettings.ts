@@ -4,81 +4,81 @@ import { Notification } from './UpdateHTML';
 import { getElementById } from './Utility';
 export const backgroundGreenAlert = async () => {
     const btn = getElementById('helpCoin')
-        if (player.unlocks.prestige && player.diamondOTCheck == false) {
-            getElementById("helpDiamond").style.backgroundColor = 'lightgreen'
-            getElementById("helpRune").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs in Help Zone! (Prestige and Runes) ")
-            player.diamondOTCheck = true
-        }
-        if (player.unlocks.transcend && player.mythosOTCheck == false) {
-            getElementById("helpMythos").style.backgroundColor = 'lightgreen'
-            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs in Help Zone! (Transcension and Challenges!) ")
-            player.mythosOTCheck = true
-        }
-        if (player.unlocks.reincarnate && player.particleOTCheck == false) {
-            getElementById("helpParticle").style.backgroundColor = 'lightgreen'
-            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
-            getElementById("helpObtainium").style.backgroundColor = 'lightgreen'
-            getElementById("helpShop").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs and info in Help Zone! (Reincarnation, Research, Shop, Challenges) ")
-            player.particleOTCheck = true
-        }
-        if (player.achievements[127] && player.antsOTCheck == false) {
-            getElementById("helpAnt").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs in Help Zone! (Ants) ")
-            player.antsOTCheck = true
-        }
-        if (player.challengecompletions[9] > 0 && player.talismanOTCheck == false) {
-            getElementById("helpRune").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs in Help Zone! (Ants) ")
-            player.talismanOTCheck = true
-        }
-        if (player.ascensionCount > 0 && player.ascendOTCheck == false) {
-            getElementById("helpAsc").style.backgroundColor = 'lightgreen'
-            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
-            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs and info in Help Zone! (Ascension, Cube Types, Challenges) ")
-            player.ascendOTCheck = true
-        }
-        if (player.challengecompletions[11] > 0 && player.C11OTCheck == false) {
-            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
-            getElementById("helpCor").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs and info in Help Zone! (Corruptions, Cube Types) ")
-            player.C11OTCheck = true
-        }
-        if (player.challengecompletions[12] > 0 && player.C12OTCheck == false) {
-            getElementById("helpRune").style.backgroundColor = 'lightgreen'
-            getElementById("helpCor").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs and info in Help Zone! (Corruptions, Runes) ")
-            player.C12OTCheck = true
-        }
-        if (player.challengecompletions[13] > 0 && player.C13OTCheck == false) {
-            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
-            getElementById("helpCor").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs and info in Help Zone! (Corruptions, Cube Types) ")
-            player.C13OTCheck = true
-        }
-        if (player.challengecompletions[14] > 0 && player.C14OTCheck == false) {
-            getElementById("helpChallenge").style.backgroundColor = 'lightgreen'
-            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
-            getElementById("helpPostc14").style.backgroundColor = 'lightgreen'
-            getElementById("helpCor").style.backgroundColor = 'lightgreen'
-            getElementById("helpPlatUpg").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs and info in Help Zone! (Too long to list here)")
-            player.C14OTCheck = true
-        }
-        if (player.challenge15Exponent > 1e15 && player.forgeOTCheck == false) {
-            getElementById("helpCubes").style.backgroundColor = 'lightgreen'
-            getElementById("helpHept").style.backgroundColor = 'lightgreen'
-            await Notification("New subtabs and info in Help Zone! (Hepteract Forge, Cube Types)")
-            player.forgeOTCheck = true
-        }
+    if (player.unlocks.prestige && player.diamondOTCheck == false) {
+        getElementById('helpDiamond').style.backgroundColor = 'lightgreen'
+        getElementById('helpRune').style.backgroundColor = 'lightgreen'
+        player.diamondOTCheck = true
+        void Notification('New subtabs in Help Zone! (Prestige and Runes)')
+    }
+    if (player.unlocks.transcend && player.mythosOTCheck == false) {
+        getElementById('helpMythos').style.backgroundColor = 'lightgreen'
+        getElementById('helpChallenge').style.backgroundColor = 'lightgreen'
+        player.mythosOTCheck = true
+        void Notification('New subtabs in Help Zone! (Transcension and Challenges!)')
+    }
+    if (player.unlocks.reincarnate && player.particleOTCheck == false) {
+        getElementById('helpParticle').style.backgroundColor = 'lightgreen'
+        getElementById('helpChallenge').style.backgroundColor = 'lightgreen'
+        getElementById('helpObtainium').style.backgroundColor = 'lightgreen'
+        getElementById('helpShop').style.backgroundColor = 'lightgreen'
+        player.particleOTCheck = true
+        void Notification('New subtabs and info in Help Zone! (Reincarnation, Research, Shop, Challenges)')
+    }
+    if (player.achievements[127] && player.antsOTCheck == false) {
+        getElementById('helpAnt').style.backgroundColor = 'lightgreen'
+        player.antsOTCheck = true
+        void Notification('New subtabs in Help Zone! (Ants)')
+    }
+    if (player.challengecompletions[9] > 0 && player.talismanOTCheck == false) {
+        getElementById('helpRune').style.backgroundColor = 'lightgreen'
+        player.talismanOTCheck = true
+        void Notification('New subtabs in Help Zone! (Runes)')
+    }
+    if (player.ascensionCount > 0 && player.ascendOTCheck == false) {
+        getElementById('helpAsc').style.backgroundColor = 'lightgreen'
+        getElementById('helpChallenge').style.backgroundColor = 'lightgreen'
+        getElementById('helpCubes').style.backgroundColor = 'lightgreen'
+        player.ascendOTCheck = true
+        void Notification('New subtabs and info in Help Zone! (Ascension, Cube Types, Challenges)')
+    }
+    if (player.challengecompletions[11] > 0 && player.C11OTCheck == false) {
+        getElementById('helpCubes').style.backgroundColor = 'lightgreen'
+        getElementById('helpCor').style.backgroundColor = 'lightgreen'
+        player.C11OTCheck = true
+        void Notification('New subtabs and info in Help Zone! (Corruptions, Cube Types)')
+    }
+    if (player.challengecompletions[12] > 0 && player.C12OTCheck == false) {
+        getElementById('helpRune').style.backgroundColor = 'lightgreen'
+        getElementById('helpCor').style.backgroundColor = 'lightgreen'
+        player.C12OTCheck = true
+        void Notification('New subtabs and info in Help Zone! (Corruptions, Runes)')
+    }
+    if (player.challengecompletions[13] > 0 && player.C13OTCheck == false) {
+        getElementById('helpCubes').style.backgroundColor = 'lightgreen'
+        getElementById('helpCor').style.backgroundColor = 'lightgreen'
+        player.C13OTCheck = true
+        void Notification('New subtabs and info in Help Zone! (Corruptions, Cube Types)')
+    }
+    if (player.challengecompletions[14] > 0 && player.C14OTCheck == false) {
+        getElementById('helpChallenge').style.backgroundColor = 'lightgreen'
+        getElementById('helpCubes').style.backgroundColor = 'lightgreen'
+        getElementById('helpPostc14').style.backgroundColor = 'lightgreen'
+        getElementById('helpCor').style.backgroundColor = 'lightgreen'
+        getElementById('helpPlatUpg').style.backgroundColor = 'lightgreen'
+        player.C14OTCheck = true
+        void Notification('New subtabs and info in Help Zone! (Too long to list here)')
+    }
+    if (player.challenge15Exponent > 1e15 && player.forgeOTCheck == false) {
+        getElementById('helpCubes').style.backgroundColor = 'lightgreen'
+        getElementById('helpHept').style.backgroundColor = 'lightgreen'
+        player.forgeOTCheck = true
+        void Notification('New subtabs and info in Help Zone! (Hepteract Forge, Cube Types)')
+    }
     let newText = false
-    for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) { 
+    for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) {
         newText = newText || e.style.backgroundColor == 'lightgreen'
     }
-    getElementById("switchSettingSubTab7").style.backgroundColor = newText ? 'lightgreen' : ''
+    getElementById('switchSettingSubTab7').style.backgroundColor = newText ? 'lightgreen' : ''
 }
 export const displayHelp = (btn: HTMLElement) => {
 
@@ -201,13 +201,31 @@ export const displayHelp = (btn: HTMLElement) => {
     Unlike the previous tiers, reincarnating does not do that much on its own, but you want to keep your reincarnation building count as high as you can. So just remember to do it whenever you can make significant gains. You'll also find that the pace between reincarnations can vary a lot - you may want some really long ones and others as quick as possible. This may or may not be useful later...
     Reincarnating for the first time also unlocks the SHOP where you can finally spend your well earned quarks, check the respective section for more info!
     `
+    const researchText = `
+    a
+    `
+    const shopText = `a
+    `
+    const antText = `a
+    `
+    const ascensionText = `a
+    `
+    const cubeText = `a
+    `
     const associated = new Map<string, string>([
         ['helpCoin', coinText],
         ['helpDiamond', diamondText],
         ['helpRune', runeText],
         ['helpMythos', mythosText],
         ['helpChallenge', challengeText],
-        ['helpParticle', particleText]
+        ['helpParticle', particleText],
+        ['helpObtainium', researchText],
+        ['helpShop', shopText],
+        ['helpAnt', antText],
+        ['helpAsc', ascensionText],
+        ['helpCubes', cubeText]
+
+
     ]);
 
     for (const e of Array.from(btn.parentElement!.children) as HTMLElement[]) {
@@ -215,12 +233,10 @@ export const displayHelp = (btn: HTMLElement) => {
             if (e.style.backgroundColor == 'crimson') {
                 e.style.backgroundColor = 'black'
             }
-        }
-        else {
+        } else {
             e.style.backgroundColor = 'crimson'
         }
     }
     DOMCacheGetOrSet('helpText').innerHTML = String(associated.get(btn.id))
-    
 
 }
