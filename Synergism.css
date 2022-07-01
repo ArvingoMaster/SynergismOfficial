@@ -2423,7 +2423,7 @@ p[id$="BlessingsTotal"] {
     width: 150px;
     height: 30px;
     margin: 3px;
-    transition-duration: 0.15s
+    transition-duration: 0.15s;
 }
 
 .helpText {
